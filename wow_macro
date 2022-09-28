@@ -1,0 +1,24 @@
+#!/bin/bash
+kbd=`cat /proc/bus/input/devices | grep -i "G600 Keyboard" -A 2 | grep Sysfs | grep -o "........$" | sed 's/\///g' | sed 's/input/event/g' | sed 's/tevent/event/g'`
+key="KEY_MINUS"
+delay=".1"
+
+# do not start if already started
+if [[ $(pidof -o %PPID -x $fn) ]]; then
+    echo "Already Running"
+    exit 0
+fi
+
+while true; do
+    # this is why you need to use sudo/superuser
+    sudo evtest --query  /dev/input/$kbd EV_KEY $key
+
+    # get evtest return code, if it's 0 the key is up
+    if [[ "$?" -ne "0" ]]; then
+    	xte 'key 9' 'key 2' 'key 3'
+    fi
+
+    sleep "$delay"
+done
+
+exit 0

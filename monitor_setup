@@ -1,0 +1,7 @@
+#!/bin/bash
+sleep 7
+#xrandr --fbmm 6560x3696 --dpi 163 --output DP-0 --pos 0x0 --mode 3840x2160 --scale 1x1 --primary --output HDMI-0 --pos 3840x312 --mode 1360x768 --scale 2x2
+xrandr --fbmm 5880x3312 --dpi 163 --output DP-0 --pos 0x0 --mode 3840x2160 --scale 1x1 --primary --output HDMI-0 --pos 3840x312 --mode 1360x768 --scale 1.5x1.5
+kquitapp5 plasmashell && kstart5 plasmashell
+
+ratbagctl warbling-mara resolution active set 2
