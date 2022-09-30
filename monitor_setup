@@ -5,3 +5,16 @@ xrandr --fbmm 5880x3312 --dpi 163 --output DP-0 --pos 0x0 --mode 3840x2160 --sca
 kquitapp5 plasmashell && kstart5 plasmashell
 
 ratbagctl warbling-mara resolution active set 3
+ratbagctl warbling-mara button 8 action set macro 't1'
+ratbagctl warbling-mara button 9 action set macro 't1'
+ratbagctl warbling-mara button 10 action set macro 't1'
+ratbagctl warbling-mara button 11 action set macro 'KEY_7'
+ratbagctl warbling-mara button 12 action set macro 'KEY_EQUAL'
+ratbagctl warbling-mara button 13 action set macro 'KEY_F4'
+ratbagctl warbling-mara button 14 action set macro 'KEY_F2'
+ratbagctl warbling-mara button 15 action set macro +KEY_LEFTCTRL KEY_MINUS -KEY_LEFTCTRL
+ratbagctl warbling-mara button 16 action set macro 'KEY_8'
+ratbagctl warbling-mara button 17 action set macro 't1'
+ratbagctl warbling-mara button 18 action set macro +KEY_LEFTALT KEY_MINUS -KEY_LEFTALT
+ratbagctl warbling-mara button 19 action set macro 't1'
+
